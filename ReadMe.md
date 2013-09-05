@@ -220,8 +220,6 @@ The fetch method when applied to a collection, will return a multi-dimensional a
 	)
 ```
 
-What's Next on the RoadMap...
-=====
 
 - [x]  Add more useful utility type methods to collections similar to backbone collections [http://backbonejs.org/#Collection]
 - [ ]  Add support for Redis to the database engine
@@ -229,12 +227,5 @@ What's Next on the RoadMap...
 
 I'm looking for contributors to help expand the capabilities of Plate PHP.
 Feel free to fork it and send a pull. Any feedback and ideas are welcome!
-
-
-- [ ] a task list item
-- [ ] list syntax required
-- [ ] normal **formatting**, @mentions, #1234 refs
-- [ ] incomplete
-- [x] completed
 
 
