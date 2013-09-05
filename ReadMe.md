@@ -255,9 +255,9 @@ If you decide to take a look under the hood and decide to contribute, the follow
 
 Naming Convetions:
 
-Folders: 	camelCase
-FileNames: 	CamelCase
-Classes: 	CamelCase
-Methods: 	camelCase
-Properties: 	camelCase
+1. Folders:	camelCase
+2. FileNames: 	CamelCase
+3. Classes: 	CamelCase
+4. Methods: 	camelCase
+5. Properties: 	camelCase
 	
