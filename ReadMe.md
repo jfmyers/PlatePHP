@@ -227,6 +227,6 @@ What's Next on the RoadMap...
 - [ ] Add support for MongoDB to the database engine
 
 I'm looking for contributors to help expand the capabilities of Plate PHP.
-So feel to free to fork the repo and send a pull. Also any feedback and ideas are welcome!
+Feel free to fork it and send a pull. Any feedback and ideas are welcome!
 
 
