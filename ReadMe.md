@@ -45,15 +45,14 @@ class Post
 {
 	public function __construct()
 	{
-		/*Specify the data-fields this model will access. 
-		These fields must match exactly to your database table fields*/
+		/* Specify the data-fields this model will access. 
+		These fields must match exactly to your database table fields */
 		$data = array(
 			'id',
-			'md5_id',
-			'cid',
-			'uid',
-			'admin',
-			'remove'
+			'title',
+			'text',
+			'user_name',
+			'pub_date'
 		);
 		$meta = array(
 			'dbType' => 'mysql' //set database engine to mysql
@@ -77,12 +76,22 @@ Now that the ```Post``` model has been defined let's fetch a single Blog Post us
 	$singlePost = $post -> filter("id=1");
 	$singlePost = $singlePost -> fetch();
 	
-	//Chain your methods
+	//You can also Chain the methods
 	$singlePost = $post -> filter("id=1") -> fetch();
 	
 	//Select a blog post by username
-	$singlePost = $post -> filter("username = 'foo@example.com') -> fetch();
+	$singlePost = $post -> filter("user_name = 'foo@example.com') -> fetch();
 	
+	// fetch() will return a single key with your model's data
+	print_r($singlePost);
+	Array
+	(
+		[id] 			=> 		1
+		[text] 			=> 		"This is my first blog post, welcome to my blog..."
+		[title] 		=> 		"My first blog post"
+		[user_name]		=>		"foo@example.com"
+		[pub_date]		=>		"2013-08-10 13:00"
+	)
 ```
 
 Naming Convetions:
