@@ -254,9 +254,10 @@ Feel free to fork it and send a pull. Any feedback and ideas are welcome!
 If you decide to take a look under the hood and decide to contribute, the following file name conventions are used:
 
 Naming Convetions:
-	- Folders: 		camelCase
-	- FileNames: 		CamelCase
-	- Classes: 		CamelCase
-	- Methods: 		camelCase
-	- Properties: 		camelCase
+
+Folders: 	camelCase
+FileNames: 	CamelCase
+Classes: 	CamelCase
+Methods: 	camelCase
+Properties: 	camelCase
 	
