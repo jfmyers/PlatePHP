@@ -81,16 +81,17 @@ Now that the ```Post``` model has been defined let's fetch a single Blog Post us
 	
 	//Select a blog post by username
 	$singlePost = $post -> filter("user_name = 'foo@example.com') -> fetch();
-	
+```
+```
 	// fetch() will return a single key with your model's data
 	print_r($singlePost);
 	Array
 	(
 		[id] 			=> 		1
-		[text] 			=> 		"This is my first blog post, welcome to my blog..."
-		[title] 		=> 		"My first blog post"
-		[user_name]		=>		"foo@example.com"
-		[pub_date]		=>		"2013-08-10 13:00"
+		[text] 			=> 		This is my first blog post, welcome to my blog...
+		[title] 		=> 		My first blog post
+		[user_name]		=>		foo@example.com
+		[pub_date]		=>		2013-08-10 13:00
 	)
 ```
 
