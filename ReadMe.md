@@ -24,7 +24,7 @@ Plate PHP eliminates the boiler plate code of database queries. Plate was inspir
 	}
 	```
 
-2. Include plate.php in your code.
+2. Include ```plate.php``` in your code.
 
 <h2>Models</h2>
 
