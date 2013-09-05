@@ -1,6 +1,8 @@
 Plate PHP -- Why Query?
 =======================================================
-Plate PHP eliminates the boiler plate code of database queries. Plate was inspired by Django Models and Backbone Collections. Let's get setup.
+Plate PHP eliminates the boiler plate code of database queries. Plate was inspired by Django Models and Backbone Collections. 
+
+<p><strong>Let's get setup.</strong></p>
 
 1. Open ```config.php``` and make sure ```$config["db"]["mysql"]["on"]``` is set to true. Then input your database connection information. For the time being make sure Redis is set to False since this is not supported in the current release.
 
@@ -65,12 +67,17 @@ class Post
 
 <h4>Accessing a Model</h4>
 
-Now that are ```Post``` model has been defined let's play with it. Every Plate model has the following database query methods attached to it: ```fetch()```, ```save()``` and ```delete()```.
+Now that the ```Post``` model has been defined let's play with it. Every Plate model has the following database query methods attached to it: ```fetch()```, ```save()``` and ```delete()```.
 
 <p><strong>fetch()</strong></p>
 Fetch is used to access your model's data. In the example below we'll use our ```Post``` model to go over options available with fetch, such as ```orderBy()``` and ```filter()```. 
-```php
 
+```php
+	
+	$postObj = new Post();
+	
+	//Let's get a blog post
+	
 
 
 ```
