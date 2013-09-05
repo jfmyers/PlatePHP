@@ -65,23 +65,25 @@ class Post
 }
 ```
 
-<h4>Accessing a Model</h4>
+<h4>Fetch a Model</h4>
 
-Now that the ```Post``` model has been defined let's play with it. Every Plate model has the following database query methods attached to it: ```fetch()```, ```save()``` and ```delete()```.
-
-<p><strong>fetch()</strong></p>
-Fetch is used to access your model's data. In the example below we'll use our ```Post``` model to go over options available with fetch, such as ```orderBy()``` and ```filter()```. 
+Now that the ```Post``` model has been defined let's fetch a single Blog Post using the ```fetch()``` method.
 
 ```php
+	//Define our blog post object
+	$post = new Post();
 	
-	$postObj = new Post();
+	//Let's get a blog post with an id of 1
+	$singlePost = $post -> filter("id=1");
+	$singlePost = $singlePost -> fetch();
 	
-	//Let's get a blog post
+	//Chain your methods
+	$singlePost = $post -> filter("id=1") -> fetch();
 	
-
-
+	//Select a blog post by username
+	$singlePost = $post -> filter("username = 'foo@example.com') -> fetch();
+	
 ```
-
 
 Naming Convetions:
 	Classes: 		CamelCase
