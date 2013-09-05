@@ -2,7 +2,7 @@ Plate PHP -- Why Query?
 =======================================================
 Plate PHP eliminates the boiler plate code of database queries. Plate was inspired by Django Models and Backbone Collections. Let's get setup.
 
-1. Open config.php and make sure the mysql option is set to true. Then input your database connection information. For the time being make sure Redis is set to False since this is not supported in the current release.
+1. Open ```config.php``` and make sure ```$config["db"]["mysql"]["on"]``` is set to true. Then input your database connection information. For the time being make sure Redis is set to False since this is not supported in the current release.
 
 	```php
 	$config = array();
