@@ -1,6 +1,6 @@
 Plate PHP
 =======================================================
-Plate PHP eliminates the boiler plate code of database queries. Plate was inspired by Django Models and Backbone Collections. 
+Plate PHP eliminates the boiler plate code of database queries. Plate was inspired by Django Models/QuerySets and Backbone Models/Collections. 
 
 <p><strong>Let's get setup.</strong></p>
 
