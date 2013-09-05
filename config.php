@@ -19,8 +19,8 @@ class PlateConfig
 		}
 		if($config["db"]["redis"] == True)
 		{
-			$config["db"]["redis"]["host"] = "54.221.195.156";
-			$config["db"]["redis"]["port"] = "6376";
+			$config["db"]["redis"]["host"] = "HOST ADDRESS";
+			$config["db"]["redis"]["port"] = "PORT NUMBER";
 			
 		}
 		
