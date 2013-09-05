@@ -86,7 +86,8 @@ class PlateModel implements PlateModelInterface
 	}
 	public function setData($data)
 	{
-		$this->_data = DataClean::cleanData($data); 
+		$this->_data = DataClean::cleanData($data);
+		return $this;
 	}
 	
 	public function getUpdateField()

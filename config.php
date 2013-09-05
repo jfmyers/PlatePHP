@@ -8,7 +8,7 @@ class PlateConfig
 	{
 		$config = array();
 		$config["db"]["mysql"]["on"] = True;//if using mysql;
-		$config["db"]["redis"]["on"] = True;//if using redis;
+		$config["db"]["redis"]["on"] = False;//if using redis;
 		
 		if($config["db"]["mysql"] == True)
 		{
