@@ -41,7 +41,7 @@ Let's create a model called ```Post```, which will represent a single blog post.
 include('plate.php');
 Plate::Start();
 
-class Post
+class Post extends PlateModel
 {
 	public function __construct()
 	{
@@ -64,7 +64,7 @@ class Post
 }
 ```
 
-<h4>Fetch a Model</h4>
+<h4>Fetch a Model: fetch()</h4>
 
 Now that the ```Post``` model has been defined let's fetch a single Blog Post using the ```fetch()``` method.
 
@@ -97,7 +97,7 @@ Now that the ```Post``` model has been defined let's fetch a single Blog Post us
 
 If you need to fetch multiple rows of data or if there is the possibility for multi-rows of data(ex. fetching blog posts published after July 1st could potentially return multiple posts) create a collection and fetch the collection. Collections are explained after the Model section.
 
-<h4>Save a Model</h4>
+<h4>Save a Model: save()</h4>
 
 The ```save()``` method allows you to both insert new data and update existing data. A new insert is performed if the save model lacks an ```id```. If an ```id``` exists Plate looks for a field to update. Let's take a look at a couple examples. First we'll create a new Blog Post and then we'll update the same Blog Post.
 
@@ -105,26 +105,70 @@ The ```save()``` method allows you to both insert new data and update existing d
 	$post = new Post();
 	//create an array of the data we are going to insert
 	$insertData = array(
-		"text"		=>	"Thanks for reading. This is going to be my second blog post..."
-		"title"		=>	"My Second Blog Post"
-		"user_name"	=>	"foo@example.com"
+		"text"		=>	"Thanks for reading. This is going to be my second blog post...",
+		"title"		=>	"My Second Blog Post",
+		"user_name"	=>	"foo@example.com",
 		"pub_date"	=>	time()
 	);
 	//pass the data to the post object and save it
-	$postId = $post->setData($insertData)->save();
+	$postId = $post -> setData($insertData) -> save();
 
 	//How about we update this post's title
 	//first set the data to be updated along with the post's id
 	$updateData = array(
-		"id"	  =>	$postId
+		"id"	  =>	$postId,
 		"title"	  =>	"Updated Title Text"
 	);
-	//tell plate what field we want to update with the update() method, set the updateData and save it
-	$post->setData($updateData)->update("title")->filter("id = '$postId'")->save();
+	//Set the new data, the field to be updated, the row to be updated and then save it
+	$post->setData($updateData) -> update("title") -> filter("id = '$postId'") -> save();
 	
 ```
+Another example of an update using the ```save()``` method.
+```php
+	//We'll update the text of the post with id = 5;
+	$postId = 5;
+	
+	$post = new Post();
+	$updateData = array(
+		"id"	=>	$postId,
+		"text"	=>	"I decided I didn't like this blog post so I'm updating it's content..."
+	);
+	//Set the data, the field to be updated, the row to be updated and then save it
+	$post -> setData($updateData) -> update("text") -> filter("id = '$postId'") -> save();
+	
+```
+<h4>Delete a Model: delete()</h4>
 
-Naming Convetions:
-	Classes: 		CamelCase
-	Methods: 		camelCase
-	Properties: 	camelCase
+The ```delete()``` method allows you to delete a single model. In the following example we'll delete a blog post using the ```Post``` model.
+
+```php
+	//Let's delete a post with an id of 3
+	$postId = 3;
+	
+	$post = new Post();
+	//Use the filter method to select Post 3 and then delete it
+	$post -> filter("id = '$postId') -> delete();
+```
+<h2>Collections</h2>
+
+A Plate collection is an ordered set of models. You can perform a number methods on a collection, but first you'll have to define your collections. Continuing with our Blog Post example from the models section above, we'll create a collection called ```PostCollection``` that houses the ```Post``` model.
+
+```php
+<?php
+include('plate.php');
+Plate::Start();
+
+class PostCollection extends PlateCollection
+{
+	public function __construct()
+	{
+		//We need to specify this collection's model
+		$this->setModel("Post");
+	}
+
+}
+```
+
+<h4>Fetch a Collection: fetch()</h4>
+
+
