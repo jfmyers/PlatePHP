@@ -72,7 +72,7 @@ class Post extends PlateModel
 Now that the ```Post``` model has been defined let's fetch a single Blog Post using the ```fetch()``` method.
 
 ```php
-	//Define our blog post object
+	//Instantiate the blog post object
 	$post = new Post();
 	
 	//Let's get a blog post with an id of 1 using the filter method
@@ -83,7 +83,7 @@ Now that the ```Post``` model has been defined let's fetch a single Blog Post us
 	$singlePost = $post -> filter("id=1") -> fetch();
 	
 	//Select a blog post by username
-	$singlePost = $post -> filter("user_name = 'foo@example.com') -> fetch();
+	$singlePost = $post -> filter("user_name = 'foo@example.com'") -> fetch();
 ```
 ```
 	// fetch() will return a single key with your model's data
