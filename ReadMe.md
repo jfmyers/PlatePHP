@@ -231,3 +231,10 @@ I'm looking for contributors to help expand the capabilities of Plate PHP.
 Feel free to fork it and send a pull. Any feedback and ideas are welcome!
 
 
+- [ ] a task list item
+- [ ] list syntax required
+- [ ] normal **formatting**, @mentions, #1234 refs
+- [ ] incomplete
+- [x] completed
+
+
