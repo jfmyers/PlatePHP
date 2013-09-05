@@ -220,6 +220,26 @@ The fetch method when applied to a collection, will return a multi-dimensional a
 	)
 ```
 
+<h2>Recommended Project File Structure</h3>
+
+```
+Project Directory
+ |
+ +-- collections
+ |  |  
+ |  +-- collectionFoo.php
+ |  +-- ...
+ |    
+ +-- models
+ |  |  
+ |  +-- modelFoo.php
+ |  +-- ...
+ |    
+ +-- PlatePhp
+ |  
+ |
+ 
+ ```
 
 What's Next on the RoadMap...
 =====
@@ -231,47 +251,7 @@ What's Next on the RoadMap...
 I'm looking for contributors to help expand the capabilities of Plate PHP.
 Feel free to fork it and send a pull. Any feedback and ideas are welcome!
 
-If you decide to take a look under the under and contribute, the following file structure is used:
-
---Plate Directory
-	|
-	- src
-		|
-		- collectionEngine
-		|
-		- config
-		|
-		_ databaseEngine
-		|
-		- modelEngine
-			|
-			_ classes
-			|
-			_ interfaces
-		|
-		-utilities
-	|
-	- plugins
-
-```
-Project
- |
- +-- file 1
- |    
- +-- dir 2
- |  |  
- |  +-- file 2.1
- |    
- +-- dir 3
- |  |  
- |  +-- file 3.1
- |  +-- file 3.2
- |    
- +-- dir 4
- |  |  
- +  |-- dir 4.1
- 
- ```
+If you decide to take a look under the hood and decide to contribute, the following file name conventions are used:
 
 Naming Convetions:
 	Folders: 		camelCase
