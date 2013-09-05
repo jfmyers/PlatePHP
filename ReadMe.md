@@ -33,6 +33,13 @@ Plate PHP eliminates the boiler plate code of database queries. Plate was inspir
 
 A Plate Models is the single source of your data. Every model should map to a single database table or document.
 
+	Model Methods:
+	1. fetch()
+	2. save()
+	3. delete()
+	4. filter()
+	5. update()
+
 <h4>Defining your models</h4>
 Let's create a model called ```Post```, which will represent a single blog post. In the model we'll define the data fields and database engine to use with this model, which in this case will be MySql. <em>Note that the name of a model must match the name of your database table and that all specified data fields must match table fields in your database.</em>
 
@@ -151,7 +158,16 @@ The ```delete()``` method allows you to delete a single model. In the following 
 ```
 <h2>Collections</h2>
 
-A Plate collection is an ordered set of models. You can perform a number of methods on a collection, but first you'll have to define your collections. Continuing with our Blog Post example from the models section above, we'll create a collection called ```PostCollection``` that houses the ```Post``` model.
+A Plate collection is an ordered set of models. 
+
+	Collection Methods
+	1. fetch()
+	2. orderBy()
+	3. filter()
+
+You can perform a number of methods on a collection, but first you'll have to define your collections. Continuing with our Blog Post example from the models section above, we'll create a collection called ```PostCollection``` that houses the 
+
+```Post``` model.
 
 ```php
 <?php
