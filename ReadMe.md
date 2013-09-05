@@ -244,7 +244,7 @@ Project Directory
 What's Next on the RoadMap...
 =====
 
-- [x]  Add more useful utility type methods to collections similar to backbone collections [http://backbonejs.org/#Collection]
+- [ ]  Add more useful utility type methods to collections similar to backbone collections [http://backbonejs.org/#Collection]
 - [ ]  Add support for Redis to the database engine
 - [ ]  Add support for MongoDB to the database engine
 
@@ -259,9 +259,4 @@ Naming Convetions:
 2. FileNames: 		CamelCase
 3. Classes: 		CamelCase
 4. Methods: 		camelCase
-<<<<<<< HEAD
 5. Properties: 		camelCase
-=======
-5. Properties: 		camelCase
-	
->>>>>>> 44e58cb3589398608d062d249b2c9cb7d59f27a2
