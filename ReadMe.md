@@ -151,7 +151,7 @@ The ```delete()``` method allows you to delete a single model. In the following 
 ```
 <h2>Collections</h2>
 
-A Plate collection is an ordered set of models. You can perform a number methods on a collection, but first you'll have to define your collections. Continuing with our Blog Post example from the models section above, we'll create a collection called ```PostCollection``` that houses the ```Post``` model.
+A Plate collection is an ordered set of models. You can perform a number of methods on a collection, but first you'll have to define your collections. Continuing with our Blog Post example from the models section above, we'll create a collection called ```PostCollection``` that houses the ```Post``` model.
 
 ```php
 <?php
@@ -171,4 +171,42 @@ class PostCollection extends PlateCollection
 
 <h4>Fetch a Collection: fetch()</h4>
 
+The fetch method when applied to a collection, will return a multi-dimensional array. Let's take a look at an example that fetches all blog posts published after July 1st, order in descending order by publication date.
+
+```php
+	//instantiate the post collection
+	$posts = PostCollection();
+	//filter by publication date after July1st, order by publication date in descending order and then fetch
+	$multiplePosts = $posts -> filter("pub_date >= '2013-07-01'") -> orderBy("-pub_date") -> fetch();
+
+```
+```
+	// fetch() will return a multi-dimensional array of blog posts
+	print_r($multiplePosts);
+	Array
+	(
+		[0] => 	array
+			(
+				[text] 			=> 		This is my first blog post, welcome to my blog...
+				[title] 		=> 		My First Blog Post
+				[user_name]		=>		foo@example.com
+				[pub_date]		=>		2013-07-10 13:00
+			),
+		[1] => 	array
+			(
+				[text] 			=> 		This is my second blog post, thanks for reading...
+				[title] 		=> 		Second Blog Post
+				[user_name]		=>		foo@example.com
+				[pub_date]		=>		2013-07-25 10:00
+			),
+		[2] => 	array
+			(
+				[text] 			=> 		This is my third blog post...your still reading this...
+				[title] 		=> 		Thrid Blog Post
+				[user_name]		=>		foo@example.com
+				[pub_date]		=>		2013-08-05 09:00
+			)
+		...
+	)
+```
 
