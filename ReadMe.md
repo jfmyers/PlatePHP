@@ -1,3 +1,11 @@
+Plate PHP -- Why Query?
+=======================================================
+Plate PHP eliminates the boiler plate code of database queries. Plate was inspired by Django Models and Backbone Collections.
+
+<h3>Simple Setup</h3>
+
+
+<h3>Simple Setup</h3>
 Naming Convetions:
 	Classes: 		CamelCase
 	Methods: 		camelCase
