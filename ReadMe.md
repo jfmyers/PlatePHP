@@ -253,6 +253,24 @@ If you decide to take a look under the under and contribute, the following file 
 	|
 	- plugins
 
+Project
+ |
+ +-- file 1
+ |    
+ +-- dir 2
+ |  |  
+ |  +-- file 2.1
+ |    
+ +-- dir 3
+ |  |  
+ |  +-- file 3.1
+ |  +-- file 3.2
+ |    
+ +-- dir 4
+ |  |  
+ +  |-- dir 4.1
+ 
+
 Naming Convetions:
 	Folders: 		camelCase
 	FileNames: 		CamelCase
