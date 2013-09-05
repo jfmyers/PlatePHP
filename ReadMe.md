@@ -31,8 +31,9 @@ Plate PHP eliminates the boiler plate code of database queries. Plate was inspir
 
 A Plate Models is the single source of your data. Every model should map to a single database table or document.
 
-<h4>Defining your models<h4>
+<h4>Defining your models</h4>
 Let's create a model called ```Post```, which will represent a single blog post. In the model we'll define the data fields and database engine to use with this model, which in this case will be MySql. Note that the name of a model must match the name of your database table and that all specified data fields must match table fields in your database. 
+
 ```php
 <?php
 include('plate.php');
@@ -61,12 +62,11 @@ class Post
 	}
 
 }
-
 ```
+
 <h4>Accessing a Model</h4>
 
 
-<h3>Simple Setup</h3>
 Naming Convetions:
 	Classes: 		CamelCase
 	Methods: 		camelCase
