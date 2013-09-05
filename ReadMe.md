@@ -97,7 +97,32 @@ Now that the ```Post``` model has been defined let's fetch a single Blog Post us
 
 If you need to fetch multiple rows of data or if there is the possibility for multi-rows of data(ex. fetching blog posts published after July 1st could potentially return multiple posts) create a collection and fetch the collection. Collections are explained after the Model section.
 
+<h4>Save a Model</h4>
 
+The ```save()``` method allows you to both insert new data and update existing data. A new insert is performed if the save model lacks an ```id```. If an ```id``` exists Plate looks for a field to update. Let's take a look at a couple examples. First we'll create a new Blog Post and then we'll update the same Blog Post.
+
+```php
+	$post = new Post();
+	//create an array of the data we are going to insert
+	$insertData = array(
+		"text"		=>	"Thanks for reading. This is going to be my second blog post..."
+		"title"		=>	"My Second Blog Post"
+		"user_name"	=>	"foo@example.com"
+		"pub_date"	=>	time()
+	);
+	//pass the data to the post object and save it
+	$postId = $post->setData($insertData)->save();
+
+	//How about we update this post's title
+	//first set the data to be updated along with the post's id
+	$updateData = array(
+		"id"	  =>	$postId
+		"title"	  =>	"Updated Title Text"
+	);
+	//tell plate what field we want to update with the update() method, set the updateData and save it
+	$post->setData($updateData)->update("title")->filter("id = '$postId'")->save();
+	
+```
 
 Naming Convetions:
 	Classes: 		CamelCase
