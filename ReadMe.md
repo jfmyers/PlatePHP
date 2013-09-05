@@ -253,6 +253,7 @@ If you decide to take a look under the under and contribute, the following file 
 	|
 	- plugins
 
+```
 Project
  |
  +-- file 1
@@ -270,6 +271,7 @@ Project
  |  |  
  +  |-- dir 4.1
  
+ ```
 
 Naming Convetions:
 	Folders: 		camelCase
