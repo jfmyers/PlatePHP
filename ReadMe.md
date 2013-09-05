@@ -1,4 +1,4 @@
-Plate PHP -- Why Query?
+Plate PHP
 =======================================================
 Plate PHP eliminates the boiler plate code of database queries. Plate was inspired by Django Models and Backbone Collections. 
 
