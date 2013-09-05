@@ -1,13 +1,13 @@
 Plate PHP -- Why Query?
 =======================================================
-Plate PHP eliminates the boiler plate code of database queries. Plate was inspired by Django Models and Backbone Collections.
+Plate PHP eliminates the boiler plate code of database queries. Plate was inspired by Django Models and Backbone Collections. Let's get setup.
 
-<h3>Simple Setup</h3>
 <ol>
 <li>
 Open config.php and make sure the mysql option is set to true. Then input your database connection information. For the time being make sure Redis is set to False since this is not supported in the current release.
+
 ```php
-	$config = array();
+		$config = array();
 		$config["db"]["mysql"]["on"] = True;//if using mysql;
 		$config["db"]["redis"]["on"] = False;//if using redis;
 		
@@ -25,10 +25,17 @@ Open config.php and make sure the mysql option is set to true. Then input your d
 			
 		}
 ```
+
 </li>
 <li>
 Include plate.php in your code.
 </li>
+</ol>
+
+<h2>Models</h2>
+___________________________________
+A Plate Models is the single source of your data. Every model should map to a single database table or document. The first step is defining your Plate Models.
+
 
 
 <h3>Simple Setup</h3>
@@ -36,12 +43,3 @@ Naming Convetions:
 	Classes: 		CamelCase
 	Methods: 		camelCase
 	Properties: 	camelCase
-
-```php
-if( $config["db"]["mysql"] == True ){
-	$config["db"]["mysql"]["host"] = "YOUR DATABASE HOST";
-	$config["db"]["mysql"]["user"] = "DB USER NAME";
-	$config["db"]["mysql"]["pass"] = "DB PASSWORD";
-	$config["db"]["mysql"]["name"] = "DATABASE NAME";
-}
-```
