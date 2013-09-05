@@ -65,6 +65,16 @@ class Post
 
 <h4>Accessing a Model</h4>
 
+Now that are ```Post``` model has been defined let's play with it. Every Plate model has the following database query methods attached to it: ```fetch()```, ```save()``` and ```delete()```.
+
+<p><strong>fetch()</strong></p>
+Fetch is used to access your model's data. In the example below we'll use our ```Post``` model to go over options available with fetch, such as ```orderBy()``` and ```filter()```. 
+```php
+
+
+
+```
+
 
 Naming Convetions:
 	Classes: 		CamelCase
