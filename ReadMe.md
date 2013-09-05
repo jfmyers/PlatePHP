@@ -72,7 +72,7 @@ Now that the ```Post``` model has been defined let's fetch a single Blog Post us
 	//Define our blog post object
 	$post = new Post();
 	
-	//Let's get a blog post with an id of 1
+	//Let's get a blog post with an id of 1 using the filter method
 	$singlePost = $post -> filter("id=1");
 	$singlePost = $singlePost -> fetch();
 	
@@ -89,11 +89,15 @@ Now that the ```Post``` model has been defined let's fetch a single Blog Post us
 	(
 		[id] 			=> 		1
 		[text] 			=> 		This is my first blog post, welcome to my blog...
-		[title] 		=> 		My first blog post
+		[title] 		=> 		My First Blog Post
 		[user_name]		=>		foo@example.com
 		[pub_date]		=>		2013-08-10 13:00
 	)
 ```
+
+If you need to fetch multiple rows of data or if there is the possibility for multi-rows of data(ex. fetching blog posts published after July 1st could potentially return multiple posts) create a collection and fetch the collection. Collections are explained after the Model section.
+
+
 
 Naming Convetions:
 	Classes: 		CamelCase
