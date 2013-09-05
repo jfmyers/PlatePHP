@@ -259,4 +259,9 @@ Naming Convetions:
 2. FileNames: 		CamelCase
 3. Classes: 		CamelCase
 4. Methods: 		camelCase
+<<<<<<< HEAD
 5. Properties: 		camelCase
+=======
+5. Properties: 		camelCase
+	
+>>>>>>> 44e58cb3589398608d062d249b2c9cb7d59f27a2
