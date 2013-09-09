@@ -84,6 +84,10 @@ Now that the ```Post``` model has been defined let's fetch a single Blog Post us
 	
 	//Select a blog post by username
 	$singlePost = $post -> filter("user_name = 'foo@example.com'") -> fetch();
+	
+	//Select a blog post by username and title
+	$singlePost = $post -> filter("user_name = 'foo@example.com' && title = 'My First Blog Post'") -> fetch();
+	
 ```
 ```
 	// fetch() will return a single key with your model's data
